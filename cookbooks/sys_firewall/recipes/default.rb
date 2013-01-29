@@ -14,6 +14,7 @@ if node[:sys_firewall][:enabled] == "enabled"
   sys_firewall "22" # SSH
   sys_firewall "80" # HTTP
   sys_firewall "443" # HTTPS
+  sys_firewall "8080" # My application's port
 
   if node[:cloud][:provider] == "softlayer"
     # Open ports for SoftLayer monitoring agent
